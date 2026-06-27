@@ -180,7 +180,7 @@ async function generatePlan(){
     const plan=JSON.parse(d.content[0].text.replace(/```json|```/g,'').trim());
     days.innerHTML=plan.days.map(day=>`<div class="plan-day"><h4>📅 ${day.day}</h4>${day.tasks.map((t,i)=>`<div class="plan-task" id="pt-${day.day}-${i}"><input type="checkbox" onchange="this.closest('.plan-task').classList.toggle('done-task',this.checked);if(this.checked)addXP(5,'Task done ✅')"><label>${t.subject} — ${t.task} <span style="color:var(--muted);font-size:.76rem">(${t.duration})</span></label></div>`).join('')}</div>`).join('');
     unlockBadge('planner');addXP(25,'AI plan generated 🤖');
-  }catch(e){days.innerHTML=`<p style="color:var(--muted);font-size:.85rem">⚠️ AI error: ${e.message}. Make sure ANTHROPIC_API_KEY is set on the server.</p>`}
+  }catch(e){days.innerHTML=`<p style="color:var(--muted);font-size:.85rem">⚠️ AI error: ${e.message}. Make sure GROQ_API_KEY is set on the server.</p>`}
 }
 
 // ── HABITS ────────────────────────────────────────────────────────
