@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="CalmCampus — Free AI-powered student wellness platform. Breathing, mood tracking, AI counsellor, study planner and more."/>
+<title>CalmCampus — Student Wellness Platform</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- PARTICLES -->
+<div id="particles"></div>
+
+<!-- ══════════ LANDING PAGE ══════════ -->
+<div id="page-auth" class="page active" style="display:block">
+
+  <!-- LANDING NAV -->
+  <nav id="landNav">
+    <div class="logo" onclick="scrollToAuth()">
+      <div class="logo-icon">🌊</div>
+      CalmCampus
+    </div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="scrollToFeats()">Features</button>
+      <button class="nav-btn" onclick="scrollToDemo()">Demo</button>
+      <button class="nav-btn" onclick="scrollToAbout()">About</button>
+    </div>
+    <div class="nav-right">
+      <button class="nav-cta" onclick="scrollToAuth()">Get Started Free →</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" id="heroSection">
+    <div class="hero-grid"></div>
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+
+    <!-- Floating pills -->
+    <div class="float-pills">
+      <div class="fpill fpill1"><div class="fi">🫁</div><div><div style="font-weight:700">Breathing</div><div class="ft">Box · 4-7-8 · Deep Belly</div></div></div>
+      <div class="fpill fpill2"><div class="fi">🔒</div><div><div style="font-weight:700">100% Anonymous</div><div class="ft">No identity collected</div></div></div>
+      <div class="fpill fpill3"><div class="fi">🏆</div><div><div style="font-weight:700">+60 XP earned</div><div class="ft">Level 2 — Calm Seeker</div></div></div>
+      <div class="fpill fpill4"><div class="fi">🤖</div><div><div style="font-weight:700">AI Counsellor</div><div class="ft">CalmBot · 24/7 Anonymous</div></div></div>
+      <div class="fpill fpill5"><div class="fi">😊</div><div><div style="font-weight:700">Mood: Happy 😄</div><div class="ft">3-day streak 🔥</div></div></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">🟢 Student Wellness Platform — Free Forever</div>
+      <h1 class="hero-title">Your calm space,<br><span class="grad">on campus.</span></h1>
+      <p class="hero-sub">Breathe. Track. Talk. Grow. — CalmCampus is the free, anonymous AI-powered wellness platform built for every student who's ever felt overwhelmed.</p>
+      <div class="hero-btns">
+        <button class="hero-btn-main" onclick="scrollToAuth()">Get Started Free 🚀</button>
+        <button class="hero-btn-sec" onclick="scrollToDemo()">▶ Watch Demo</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-num">100%</div><div class="hstat-lbl">Anonymous</div></div>
+        <div class="hstat"><div class="hstat-num">8+</div><div class="hstat-lbl">Wellness Tools</div></div>
+        <div class="hstat"><div class="hstat-num">24/7</div><div class="hstat-lbl">AI Support</div></div>
+        <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-lbl">Always</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE CAROUSEL -->
+  <div class="quote-section">
+    <div style="text-align:center;margin-bottom:1rem;font-size:.72rem;color:var(--p);font-weight:700;letter-spacing:1.5px;text-transform:uppercase">Words of Calm</div>
+    <div class="quote-carousel" id="quoteCarousel">
+      <div class="qslide active"><blockquote>"You are allowed to be both a masterpiece and a work in progress."</blockquote><cite>— Sophia Bush</cite></div>
+      <div class="qslide"><blockquote>"Progress, not perfection. That's the mantra of a healthy mind."</blockquote><cite>— Unknown</cite></div>
+      <div class="qslide"><blockquote>"You don't have to control your thoughts. You just have to stop letting them control you."</blockquote><cite>— Dan Millman</cite></div>
+      <div class="qslide"><blockquote>"Your mental health is a priority. Your happiness is an essential."</blockquote><cite>— Unknown</cite></div>
+      <div class="qslide"><blockquote>"Rest when you're weary. Refresh and renew yourself."</blockquote><cite>— Ralph Marston</cite></div>
+    </div>
+    <div class="quote-nav" id="quoteNav"></div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="feat-section" id="featSection">
+    <div class="sec-label">What's Inside</div>
+    <p class="sec-title">Everything you need to <span>stay calm</span></p>
+    <p class="sec-sub">Built for students, by a student. Every feature designed around what actually helps.</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">🫁</div><h3>Breathing Exercises</h3><p>Box, 4-7-8, Deep Belly — animated real-time guidance to lower anxiety in under 2 minutes.</p></div>
+      <div class="feat-card"><div class="feat-icon">😊</div><h3>Mood Tracker</h3><p>Daily emotional check-ins with a private journal and mood history to spot patterns over time.</p></div>
+      <div class="feat-card"><div class="feat-icon">🤖</div><h3>AI Study Planner</h3><p>Tell Claude your subjects — get a personalized 5-day study plan generated in seconds.</p></div>
+      <div class="feat-card"><div class="feat-icon">💬</div><h3>AI Counsellor</h3><p>CalmBot: 24/7 AI counsellor for student mental health. Anonymous. Non-judgmental. Always there.</p></div>
+      <div class="feat-card"><div class="feat-icon">✅</div><h3>Habit & Sleep Tracker</h3><p>Build 8 daily wellness habits. Log sleep quality. Visual history bars. +XP for every action.</p></div>
+      <div class="feat-card"><div class="feat-icon">🏆</div><h3>Gamification</h3><p>Earn XP, unlock 11 badges, level up from Beginner Breather to Stress Master.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎵</div><h3>Ambient Sound Mixer</h3><p>Mix rain, forest, ocean, fire — 8 sounds synthesized live via Web Audio API. Zero downloads.</p></div>
+      <div class="feat-card"><div class="feat-icon">🆘</div><h3>Crisis SOS</h3><p>Grounding techniques + verified Indian helplines always one tap away. Your safety matters.</p></div>
+    </div>
+  </div>
+
+  <!-- DEMO VIDEO -->
+  <div class="demo-section" id="demoSection">
+    <div class="sec-label">See It In Action</div>
+    <p class="sec-title">Watch <span>CalmCampus</span> live</p>
+    <p class="sec-sub">Full walkthrough of every feature — 71 seconds that could change how you handle stress</p>
+    <div class="video-wrap">
+      <!-- TO ADD YOUR VIDEO: replace the div below with:
+           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+           OR <video src="your-demo.mp4" controls></video> -->
+      <div class="video-placeholder">
+        <div class="play-circle">▶</div>
+        <p><strong style="color:var(--text)">Add your demo video here</strong><br/>Upload to YouTube → copy embed URL → replace this block with an &lt;iframe&gt; tag</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH -->
+  <div class="auth-wrap" id="authSection">
+    <div class="auth-left">
+      <h2>Join <span>anonymously</span>.<br>No judgment.</h2>
+      <p>CalmCampus never asks for your real name, student ID, or any identifying information. Your mental health journey is yours alone.</p>
+      <div class="anon-feature"><div class="af-icon">🔒</div><p><strong>No real name required</strong> — use any nickname you like</p></div>
+      <div class="anon-feature"><div class="af-icon">📵</div><p><strong>No tracking ever</strong> — data never leaves your browser</p></div>
+      <div class="anon-feature"><div class="af-icon">🎓</div><p><strong>No university link</strong> — fully private from your institution</p></div>
+      <div class="anon-feature"><div class="af-icon">💚</div><p><strong>Always free</strong> — no credit card, no premium tier</p></div>
+    </div>
+    <div class="auth-card">
+      <div style="text-align:center;margin-bottom:1.25rem">
+        <div style="font-size:1.5rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">🌊 CalmCampus</div>
+        <div style="font-size:.8rem;color:var(--muted);margin-top:.2rem">Your safe space starts here</div>
+      </div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchAuth('login')">Sign In</button>
+        <button class="auth-tab" onclick="switchAuth('signup')">Sign Up</button>
+      </div>
+      <div class="anon-box">🔒 No real name or email needed. Use any nickname.</div>
+      <div id="auth-login">
+        <div class="field"><label>Nickname / Alias</label><input type="text" id="li-nick" placeholder="e.g. StarGazer, QuietOcean…"/></div>
+        <div class="field"><label>Password</label><input type="password" id="li-pass" placeholder="••••••••"/></div>
+        <button class="btn btn-grad btn-full" style="margin-top:.5rem" onclick="doLogin()">Enter My Safe Space 🌊</button>
+      </div>
+      <div id="auth-signup" style="display:none">
+        <div class="field"><label>Choose a Nickname</label><input type="text" id="su-nick" placeholder="e.g. CalmWave, BlueSky…"/></div>
+        <div class="field"><label>Your University (optional)</label><input type="text" id="su-uni" placeholder="Woxsen, IIT, JNTU…"/></div>
+        <div class="field"><label>Create a Password</label><input type="password" id="su-pass" placeholder="Something memorable"/></div>
+        <button class="btn btn-grad btn-full" style="margin-top:.5rem" onclick="doSignup()">Create Account ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about-section" id="aboutSection">
+    <div style="max-width:980px;margin:0 auto">
+      <div class="sec-label">The Story</div>
+      <p class="sec-title">About <span>CalmCampus</span></p>
+      <p class="sec-sub">Why it exists, how it works, and who built it.</p>
+      <div class="about-grid">
+        <div class="about-card"><h3>🌱 Why We Built This</h3><p>Student mental health is at a crisis point. Exam pressure, social anxiety, burnout affect millions daily — yet most never seek help due to stigma, cost, or lack of access. CalmCampus fills that gap: free, anonymous, always available.</p></div>
+        <div class="about-card"><h3>⚙️ How It Works</h3><p>CalmCampus combines clinically-inspired tools (breathing, mood journaling, habit science) with Claude AI (Anthropic) for personalized, intelligent support. Everything runs in your browser — your data never leaves your device.</p></div>
+        <div class="about-card"><h3>📅 Journey</h3>
+          <div style="margin-top:.75rem">
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><h4>SIP 2026 — NeuroWatch</h4><p>Started as an AI mental health monitoring system at Woxsen University. Palash built the full prototype solo.</p></div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><h4>Research & Design</h4><p>Studied CBT, breathing science, and student mental health reports to design tools that actually help.</p></div></div>
+            <div class="tl-item"><div class="tl-dot gold"></div><div class="tl-content"><h4>CalmCampus v3 — Live</h4><p>Independently evolved into a full AI-powered wellness platform with gamification, anonymous auth, and counselling.</p></div></div>
+          </div>
+        </div>
+        <div class="about-card"><h3>🛡️ Privacy Promise</h3><p style="margin-bottom:.75rem">We take anonymity seriously:</p><p>✅ No real identity collected<br>✅ No analytics or tracking<br>✅ No data sold or shared<br>✅ No university integration<br>✅ AI chats not stored<br>✅ Most features work offline</p></div>
+        <div class="dev-card">
+          <h3>👨‍💻 Developed by Palash Mulchandani</h3>
+          <p>CalmCampus is a solo portfolio project — pure HTML5, CSS3, and Vanilla JavaScript. No frameworks, no shortcuts, just craft. Powered by Claude AI (Anthropic) for counselling and study planning. Built at Woxsen University to solve a real student problem experienced firsthand.</p>
+          <div class="dev-meta"><span class="dev-tag">HTML5</span><span class="dev-tag">CSS3</span><span class="dev-tag">Vanilla JS</span><span class="dev-tag">Web Audio API</span><span class="dev-tag">Claude AI</span><span class="dev-tag">Responsive</span><span class="dev-tag">UX/UI</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Made with 💙 by <a href="https://github.com/palashmulchandani" target="_blank">Palash Mulchandani</a> &nbsp;·&nbsp; CalmCampus © 2025 &nbsp;·&nbsp;
+    <a href="mailto:palashmulchandani@gmail.com">Contact</a> &nbsp;·&nbsp;
+    <a href="https://github.com/palashmulchandani/calmcampus" target="_blank">GitHub</a>
+  </footer>
+</div>
+
+<!-- ══════════ APP NAV ══════════ -->
+<nav id="mainNav" style="display:none">
+  <div class="logo" onclick="showPage('dashboard')"><div class="logo-icon">🌊</div>CalmCampus</div>
+  <div class="nav-links">
+    <button class="nav-btn active" onclick="showPage('dashboard')">Dashboard</button>
+    <button class="nav-btn" onclick="showPage('breathe')">Breathe</button>
+    <button class="nav-btn" onclick="showPage('mood')">Mood</button>
+    <button class="nav-btn" onclick="showPage('study')">Study</button>
+    <button class="nav-btn" onclick="showPage('planner')">AI Planner</button>
+    <button class="nav-btn" onclick="showPage('habits')">Habits</button>
+    <button class="nav-btn" onclick="showPage('sounds')">Sounds</button>
+    <button class="nav-btn" onclick="showPage('counsel')">Counselling</button>
+    <button class="nav-btn" onclick="showPage('exams')">Exams</button>
+    <button class="nav-btn" onclick="showPage('crisis')">SOS</button>
+    <button class="nav-btn" onclick="showPage('badges')">Badges</button>
+    <button class="nav-btn" onclick="showPage('profile')">Profile</button>
+  </div>
+  <div class="nav-right">
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+    <div class="avatar-btn" id="navAvatar">?</div>
+    <div class="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="nav-btn" onclick="showPage('dashboard');closeMobile()">Dashboard</button>
+  <button class="nav-btn" onclick="showPage('breathe');closeMobile()">Breathe</button>
+  <button class="nav-btn" onclick="showPage('mood');closeMobile()">Mood</button>
+  <button class="nav-btn" onclick="showPage('study');closeMobile()">Study</button>
+  <button class="nav-btn" onclick="showPage('planner');closeMobile()">AI Planner</button>
+  <button class="nav-btn" onclick="showPage('habits');closeMobile()">Habits</button>
+  <button class="nav-btn" onclick="showPage('sounds');closeMobile()">Sounds</button>
+  <button class="nav-btn" onclick="showPage('counsel');closeMobile()">Counselling</button>
+  <button class="nav-btn" onclick="showPage('exams');closeMobile()">Exams</button>
+  <button class="nav-btn" onclick="showPage('crisis');closeMobile()">SOS</button>
+  <button class="nav-btn" onclick="showPage('badges');closeMobile()">Badges</button>
+  <button class="nav-btn" onclick="showPage('profile');closeMobile()">Profile</button>
+</div>
+
+<!-- ══════════ APP PAGES ══════════ -->
+<div id="page-dashboard" class="page" style="display:none"><div class="container">
+  <div class="dash-hero">
+    <h2>Welcome back, <span id="dashName">friend</span> 👋</h2>
+    <p id="dashGreet" style="color:var(--muted);font-size:.88rem;margin-top:.2rem"></p>
+    <div style="margin-top:.6rem;display:flex;gap:.4rem;flex-wrap:wrap" id="dashBadgeRow"></div>
+    <div class="xp-bar-wrap"><div class="xp-bar" id="xpBar" style="width:0%"></div></div>
+    <div style="display:flex;justify-content:space-between;font-size:.73rem;color:var(--muted);margin-top:.3rem"><span id="xpLabel">0 XP</span><span id="xpNext">100 XP to Level 2</span></div>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-val" id="streakStat">1</div><div class="stat-lbl">Day Streak</div></div>
+    <div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-val" id="xpStat">0</div><div class="stat-lbl">Total XP</div></div>
+    <div class="stat-card"><div class="stat-icon">🏅</div><div class="stat-val" id="badgeStat">0</div><div class="stat-lbl">Badges</div></div>
+    <div class="stat-card"><div class="stat-icon">😊</div><div class="stat-val" id="moodStat">—</div><div class="stat-lbl">Mood</div></div>
+    <div class="stat-card"><div class="stat-icon">💤</div><div class="stat-val" id="sleepStat">—</div><div class="stat-lbl">Sleep</div></div>
+  </div>
+  <div class="dash-grid">
+    <div class="dash-card" onclick="showPage('breathe')"><div class="dc-icon">🫁</div><h3>Breathe</h3><p>Guided exercises</p></div>
+    <div class="dash-card" onclick="showPage('mood')"><div class="dc-icon">😊</div><h3>Mood Tracker</h3><p>Daily check-in</p></div>
+    <div class="dash-card" onclick="showPage('planner')"><div class="dc-icon">🤖</div><h3>AI Study Planner</h3><p>Smart weekly plan</p></div>
+    <div class="dash-card" onclick="showPage('counsel')"><div class="dc-icon">💬</div><h3>AI Counsellor</h3><p>Talk to CalmBot</p></div>
+    <div class="dash-card" onclick="showPage('habits')"><div class="dc-icon">✅</div><h3>Habits & Sleep</h3><p>Build routines</p></div>
+    <div class="dash-card" onclick="showPage('sounds')"><div class="dc-icon">🎵</div><h3>Sounds</h3><p>Ambient mixer</p></div>
+    <div class="dash-card" onclick="showPage('exams')"><div class="dc-icon">📅</div><h3>Exams</h3><p>Countdown timer</p></div>
+    <div class="dash-card" onclick="showPage('crisis')"><div class="dc-icon">🆘</div><h3>Crisis SOS</h3><p>Immediate help</p></div>
+  </div>
+</div></div>
+
+<div id="page-breathe" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Breathing</span> Exercises 🫁</h2><p>Lower anxiety in under 2 minutes with science-backed techniques</p></div>
+  <div class="breath-types">
+    <button class="btype active" onclick="setBType('box',this)">📦 Box (4-4-4-4)</button>
+    <button class="btype" onclick="setBType('478',this)">✨ 4-7-8</button>
+    <button class="btype" onclick="setBType('deep',this)">🌊 Deep Belly</button>
+    <button class="btype" onclick="setBType('calm',this)">🧘 Calm (6-2-7)</button>
+  </div>
+  <div class="card" style="max-width:440px;margin:0 auto;text-align:center">
+    <div id="breathRing"><div><div id="breathWord" style="font-size:1.1rem;font-weight:700;color:var(--p)">Ready</div><div id="breathSec" style="font-size:.8rem;color:var(--muted);margin-top:.2rem"></div></div></div>
+    <div class="elapsed" id="breathElapsed">0:00</div>
+    <div style="font-size:.82rem;color:var(--muted);margin-bottom:.75rem" id="breathInstr">Choose a technique and press Start</div>
+    <div class="btn-row">
+      <button class="btn btn-grad" id="breathBtn" onclick="toggleBreath()">▶ Start</button>
+      <button class="btn btn-outline" onclick="resetBreath()">Reset</button>
+    </div>
+  </div>
+</div></div>
+
+<div id="page-mood" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Mood</span> Tracker 😊</h2><p>Check in with yourself every day</p></div>
+  <div class="card">
+    <p style="font-size:.84rem;color:var(--muted);margin-bottom:.75rem">How are you feeling right now?</p>
+    <div class="mood-scale">
+      <button class="mood-pill" onclick="selMood('😢','Sad',this)">😢 Sad</button>
+      <button class="mood-pill" onclick="selMood('😟','Anxious',this)">😟 Anxious</button>
+      <button class="mood-pill" onclick="selMood('😐','Neutral',this)">😐 Neutral</button>
+      <button class="mood-pill" onclick="selMood('🙂','Good',this)">🙂 Good</button>
+      <button class="mood-pill" onclick="selMood('😄','Happy',this)">😄 Happy</button>
+      <button class="mood-pill" onclick="selMood('🤩','Amazing',this)">🤩 Amazing</button>
+    </div>
+    <textarea class="inp" id="moodNote" placeholder="What's on your mind? (optional)"></textarea>
+    <button class="btn btn-grad" style="margin-top:.6rem" onclick="saveMood()">💾 Save Mood +10 XP</button>
+  </div>
+  <div id="moodHistory" style="margin-top:1.25rem"></div>
+</div></div>
+
+<div id="page-study" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Study</span> Smart 📚</h2><p>Focus tools + Pomodoro timer</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-bottom:1.5rem">
+    <div class="card"><div style="font-size:1.5rem;margin-bottom:.4rem">⏰</div><h3 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Time Blocking</h3><p style="font-size:.78rem;color:var(--muted);line-height:1.5">Assign tasks to fixed blocks. Protect your deep work hours.</p></div>
+    <div class="card"><div style="font-size:1.5rem;margin-bottom:.4rem">🧠</div><h3 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Active Recall</h3><p style="font-size:.78rem;color:var(--muted);line-height:1.5">Test yourself instead of re-reading. 2× more effective.</p></div>
+    <div class="card"><div style="font-size:1.5rem;margin-bottom:.4rem">📵</div><h3 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Phone-Free Zone</h3><p style="font-size:.78rem;color:var(--muted);line-height:1.5">Physical separation cuts distraction by up to 70%.</p></div>
+    <div class="card"><div style="font-size:1.5rem;margin-bottom:.4rem">💧</div><h3 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Hydration</h3><p style="font-size:.78rem;color:var(--muted);line-height:1.5">Even mild dehydration impairs focus. Keep water close.</p></div>
+  </div>
+  <div class="card" style="text-align:center;padding:2rem">
+    <p style="font-size:.78rem;color:var(--muted);margin-bottom:.75rem" id="pomoModeLabel">Focus Session · 25 min</p>
+    <div class="pomo-ring">
+      <svg width="150" height="150" viewBox="0 0 150 150"><defs><linearGradient id="pomoGrad" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#00C9B1"/><stop offset="100%" stop-color="#0066CC"/></linearGradient></defs><circle class="pomo-bg" cx="75" cy="75" r="63"/><circle class="pomo-prog" id="pomoCircle" cx="75" cy="75" r="63" stroke-dasharray="396" stroke-dashoffset="0"/></svg>
+      <div class="pomo-time-inner"><span id="pomoTimeText">25:00</span><span class="pomo-mode-lbl" id="pomoModeSmall">Focus</span></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-grad" id="pomoBtn" onclick="togglePomo()">▶ Start</button>
+      <button class="btn btn-outline" onclick="resetPomo()">Reset</button>
+      <button class="btn btn-outline" onclick="switchPomo()">☕ Break</button>
+    </div>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:.75rem" id="pomoCycles">Sessions today: 0</p>
+  </div>
+</div></div>
+
+<div id="page-planner" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2>🤖 <span>AI Study</span> Planner</h2><p>Add your subjects — Claude builds your week</p></div>
+  <div class="card">
+    <div style="display:flex;gap:.6rem"><input type="text" id="subjectInput" placeholder="e.g. Physics, DSA, English…" style="flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:.86rem;cursor:text" onkeydown="if(event.key==='Enter')addSubject()"/><button class="btn btn-outline btn-sm" onclick="addSubject()">+ Add</button></div>
+    <div id="subjectChips" style="margin-top:.6rem;min-height:28px"></div>
+    <div style="margin-top:.75rem"><label style="font-size:.78rem;color:var(--muted)">Hours/day: <strong id="hoursVal" style="color:var(--p)">4</strong></label><input type="range" min="1" max="10" value="4" id="hoursSlider" oninput="document.getElementById('hoursVal').textContent=this.value" style="width:100%;accent-color:var(--p);margin-top:.4rem"/></div>
+    <button class="btn btn-grad" style="margin-top:.75rem" onclick="generatePlan()">🤖 Generate My Study Plan +25 XP</button>
+  </div>
+  <div id="planOutput" style="display:none" class="card">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem"><h3 style="font-size:.95rem;font-weight:700;color:var(--p)">Your Personalized Plan ✨</h3><button class="btn btn-outline btn-sm" onclick="generatePlan()">🔄 Regenerate</button></div>
+    <div id="planDays"></div>
+  </div>
+</div></div>
+
+<div id="page-habits" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Habit</span> Tracker ✅</h2><p>Tap to complete — earn XP for each one</p></div>
+  <div class="habit-grid" id="habitGrid"></div>
+  <div class="sec-head" style="margin-top:2rem"><h2><span>Sleep</span> Tracker 💤</h2><p>Log your sleep quality every night</p></div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.75rem">
+      <div><label style="font-size:.76rem;color:var(--muted);display:block;margin-bottom:.35rem">Hours slept</label><input type="number" id="sleepHrs" min="0" max="12" step=".5" placeholder="7.5" style="width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--text);font-family:inherit;cursor:text"/></div>
+      <div><label style="font-size:.76rem;color:var(--muted);display:block;margin-bottom:.35rem">Quality</label><div class="sleep-quality"><button class="sq" onclick="selSleep('😴 Poor',this)">😴 Poor</button><button class="sq" onclick="selSleep('😐 OK',this)">😐 OK</button><button class="sq" onclick="selSleep('😊 Good',this)">😊 Good</button></div></div>
+    </div>
+    <button class="btn btn-grad" onclick="saveSleep()">💾 Log Sleep +10 XP</button>
+  </div>
+  <div id="sleepHistory" style="margin-top:1rem"></div>
+</div></div>
+
+<div id="page-sounds" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Ambient</span> Sounds 🎵</h2><p>Mix calming sounds — powered by Web Audio API, zero downloads</p></div>
+  <div class="sound-grid" id="soundGrid"></div>
+  <div style="text-align:center;margin-top:1.25rem"><button class="btn btn-danger btn-sm" onclick="stopAll()">⏹ Stop All</button></div>
+</div></div>
+
+<div id="page-counsel" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2>💬 <span>AI Counsellor</span></h2><p>Talk to CalmBot — anonymous, non-judgmental, 24/7</p></div>
+  <div class="chat-wrap">
+    <div class="chat-head">
+      <div class="bot-avatar">🤖</div>
+      <div class="bot-info"><h3>CalmBot</h3><p><span class="online-dot"></span>Online · Anonymous · Confidential</p></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hey 🌊 I'm CalmBot, your anonymous AI counsellor. I'm here to listen without judgment — about stress, anxiety, exams, or anything else. What's going on today?</div>
+    </div>
+    <div class="quick-replies" id="quickReplies">
+      <button class="qr-btn" onclick="sendQuick('I feel really stressed about exams')">😰 Exam stress</button>
+      <button class="qr-btn" onclick="sendQuick('I feel anxious and cannot sleep')">😟 Anxiety</button>
+      <button class="qr-btn" onclick="sendQuick('I feel lonely and disconnected')">💔 Loneliness</button>
+      <button class="qr-btn" onclick="sendQuick('I need motivation to study')">📚 Motivation</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type how you're feeling… (anonymous)" onkeydown="if(event.key==='Enter')sendChat()"/>
+      <button class="send-btn" onclick="sendChat()">Send</button>
+    </div>
+  </div>
+  <div class="counsel-disclaimer">🔒 <strong>Fully anonymous.</strong> CalmBot is an AI — not a licensed therapist. For serious concerns, use the helplines below.</div>
+  <h3 style="font-size:.92rem;font-weight:700;margin:1.25rem 0 .75rem;color:var(--p)">Human Support Resources</h3>
+  <div class="resource-links">
+    <a class="res-link" href="tel:18602662345">📞 Vandrevala Foundation — 1860-2662-345</a>
+    <a class="res-link" href="tel:9152987821">📞 iCall (TISS) — 9152987821</a>
+    <a class="res-link" href="tel:08046110007">📞 NIMHANS — 080-46110007</a>
+    <a class="res-link" href="https://icallhelpline.org" target="_blank">🌐 iCall Online Chat</a>
+  </div>
+</div></div>
+
+<div id="page-exams" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Exam</span> Countdown 📅</h2><p>Never miss a deadline</p></div>
+  <div class="card"><div class="exam-form"><input type="text" id="examName" placeholder="Subject / Exam"/><input type="date" id="examDate"/><button class="btn btn-grad btn-sm" onclick="addExam()">Add</button></div></div>
+  <div id="examList"></div>
+</div></div>
+
+<div id="page-crisis" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Crisis</span> SOS 🆘</h2><p>You are not alone. Help is available right now.</p></div>
+  <div style="background:rgba(255,92,107,.08);border:1px solid rgba(255,92,107,.25);border-radius:var(--r);padding:1.25rem;margin-bottom:1.25rem;text-align:center"><p style="font-size:.95rem;font-weight:700;color:var(--red)">In immediate danger — call 112 now</p><p style="font-size:.82rem;color:var(--muted);margin-top:.25rem">Your life matters. You are worthy of help.</p></div>
+  <div class="sos-grid">
+    <div class="sos-card"><div style="font-size:1.6rem;margin-bottom:.4rem">📞</div><h3 style="font-size:.9rem;font-weight:700;color:var(--red);margin-bottom:.25rem">Vandrevala Foundation</h3><p style="font-size:.78rem;color:var(--muted);margin-bottom:.4rem">24/7 mental health helpline</p><a href="tel:18602662345" style="color:var(--p);font-size:.82rem;font-weight:600;text-decoration:none">📱 1860-2662-345</a></div>
+    <div class="sos-card"><div style="font-size:1.6rem;margin-bottom:.4rem">💬</div><h3 style="font-size:.9rem;font-weight:700;color:var(--red);margin-bottom:.25rem">iCall (TISS)</h3><p style="font-size:.78rem;color:var(--muted);margin-bottom:.4rem">Student counselling</p><a href="tel:9152987821" style="color:var(--p);font-size:.82rem;font-weight:600;text-decoration:none">📱 9152987821</a></div>
+    <div class="sos-card"><div style="font-size:1.6rem;margin-bottom:.4rem">🏥</div><h3 style="font-size:.9rem;font-weight:700;color:var(--red);margin-bottom:.25rem">NIMHANS</h3><p style="font-size:.78rem;color:var(--muted);margin-bottom:.4rem">National mental health</p><a href="tel:08046110007" style="color:var(--p);font-size:.82rem;font-weight:600;text-decoration:none">📱 080-46110007</a></div>
+    <div class="sos-card"><div style="font-size:1.6rem;margin-bottom:.4rem">🌐</div><h3 style="font-size:.9rem;font-weight:700;color:var(--red);margin-bottom:.25rem">iCall Online</h3><p style="font-size:.78rem;color:var(--muted);margin-bottom:.4rem">Chat support</p><a href="https://icallhelpline.org" target="_blank" style="color:var(--p);font-size:.82rem;font-weight:600;text-decoration:none">icallhelpline.org ↗</a></div>
+  </div>
+  <div style="margin-top:1.5rem">
+    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:.75rem;color:var(--p)">Ground yourself right now:</h3>
+    <div class="sos-tip"><span>👁️</span><div><strong>5-4-3-2-1:</strong> Name 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste.</div></div>
+    <div class="sos-tip"><span>🫁</span><div><strong>Box Breathe:</strong> Inhale 4s → Hold 4s → Exhale 4s → Hold 4s. Repeat.</div></div>
+    <div class="sos-tip"><span>💬</span><div><strong>Tell someone:</strong> Text a trusted friend right now.</div></div>
+    <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+      <button class="btn btn-grad" onclick="showPage('breathe')">🫁 Start Breathing Now</button>
+      <button class="btn btn-outline" onclick="showPage('counsel')">💬 Talk to CalmBot</button>
+    </div>
+  </div>
+</div></div>
+
+<div id="page-badges" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>Badges</span> & XP 🏆</h2><p>Earn rewards for building healthy habits</p></div>
+  <div class="card" style="text-align:center;padding:2rem">
+    <div class="level-circle"><div style="font-size:1.9rem;font-weight:900;color:#000" id="levelNum">1</div><div style="font-size:.6rem;font-weight:700;color:rgba(0,0,0,.7)">LEVEL</div></div>
+    <div style="font-size:1rem;font-weight:800;margin-bottom:.25rem" id="levelTitle">Beginner Breather</div>
+    <div style="font-size:.8rem;color:var(--muted)" id="levelXP">0 / 100 XP</div>
+    <div class="xp-bar-wrap" style="max-width:280px;margin:.75rem auto 0"><div class="xp-bar" id="xpBar2" style="width:0%"></div></div>
+  </div>
+  <div class="badges-grid" id="badgesGrid"></div>
+</div></div>
+
+<div id="page-profile" class="page" style="display:none"><div class="container">
+  <div class="sec-head"><h2><span>My</span> Profile 👤</h2><p>Your anonymous account</p></div>
+  <div class="card" style="display:flex;align-items:center;gap:1.25rem">
+    <div class="profile-avatar" id="profAvatar">?</div>
+    <div><h2 style="font-size:1.15rem;font-weight:800" id="profName">friend</h2><p style="font-size:.82rem;color:var(--muted);margin-top:.15rem" id="profUni"></p><div style="margin-top:.4rem;display:flex;gap:.35rem;flex-wrap:wrap" id="profBadges"></div></div>
+  </div>
+  <div class="card" style="margin-top:1rem">
+    <h3 style="font-size:.88rem;font-weight:700;margin-bottom:.75rem;color:var(--p)">Preferences</h3>
+    <div class="setting-row"><div><div style="font-size:.88rem;font-weight:500">Dark Mode</div><div style="font-size:.76rem;color:var(--muted)">Deep ocean theme</div></div><label class="toggle"><input type="checkbox" id="darkToggle" checked onchange="toggleTheme()"><div class="toggle-slider"></div></label></div>
+    <div class="setting-row"><div><div style="font-size:.88rem;font-weight:500">Anonymous Mode</div><div style="font-size:.76rem;color:var(--muted)">Always on — your data is private</div></div><label class="toggle"><input type="checkbox" checked disabled><div class="toggle-slider"></div></label></div>
+  </div>
+  <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem">
+    <button class="btn btn-outline" onclick="exportData()">📤 Export My Data</button>
+    <button class="btn btn-danger btn-sm" onclick="doLogout()">🚪 Sign Out</button>
+  </div>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
