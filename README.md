@@ -65,3 +65,4 @@ git push -u origin main
   always one of: missing env var, no billing on the Anthropic account, or
   rate limiting — check the Vercel function logs (Project → Deployments →
   the function → Logs) for the exact error message.
+ 
