@@ -54,7 +54,7 @@ git clone https://github.com/PalashMulchandani/calmcampus.git
 cd calmcampus
 ```
 
-For full local setup, environment variables, and deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
 
 ## 👨‍💻 About
 
