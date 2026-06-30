@@ -55,8 +55,10 @@
 
     <div class="hero-content">
       <div class="hero-badge">🟢 Student Wellness Platform — Free Forever</div>
-      <h1 class="hero-title">Your calm space,<br><span class="grad">on campus.</span></h1>
-      <p class="hero-sub">Breathe. Track. Talk. Grow. — CalmCampus is the free, anonymous AI-powered wellness platform built for every student who's ever felt overwhelmed.</p>
+      <div class="hero-textcard">
+        <h1 class="hero-title">Your calm space,<br><span class="grad">on campus.</span></h1>
+        <p class="hero-sub">Breathe. Track. Talk. Grow. — CalmCampus is the free, anonymous AI-powered wellness platform built for every student who's ever felt overwhelmed.</p>
+      </div>
       <div class="hero-btns">
         <button class="hero-btn-main" onclick="scrollToAuth()">Get Started Free 🚀</button>
         <button class="hero-btn-sec" onclick="scrollToDemo()">▶ Watch Demo</button>
@@ -249,7 +251,12 @@
   </div>
 </div></div>
 
-<div id="page-breathe" class="page" style="display:none"><div class="container">
+<div id="page-breathe" class="page" style="display:none">
+  <video class="page-bg-video" autoplay muted loop playsinline>
+    <source src="assets/breathe-bg.mp4" type="video/mp4">
+  </video>
+  <div class="page-bg-overlay"></div>
+  <div class="container">
   <div class="sec-head"><h2><span>Breathing</span> Exercises 🫁</h2><p>Lower anxiety in under 2 minutes with science-backed techniques</p></div>
   <div class="breath-types">
     <button class="btype active" onclick="setBType('box',this)">📦 Box (4-4-4-4)</button>
@@ -323,7 +330,12 @@
   </div>
 </div></div>
 
-<div id="page-habits" class="page" style="display:none"><div class="container">
+<div id="page-habits" class="page" style="display:none">
+  <video class="page-bg-video" autoplay muted loop playsinline>
+    <source src="assets/sleep-bg.mp4" type="video/mp4">
+  </video>
+  <div class="page-bg-overlay"></div>
+  <div class="container">
   <div class="sec-head"><h2><span>Habit</span> Tracker ✅</h2><p>Tap to complete — earn XP for each one</p></div>
   <div class="habit-grid" id="habitGrid"></div>
   <div class="sec-head" style="margin-top:2rem"><h2><span>Sleep</span> Tracker 💤</h2><p>Log your sleep quality every night</p></div>

@@ -97,6 +97,8 @@ function showPage(id){
   document.querySelectorAll('#mainNav .nav-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick')?.includes("'"+id+"'")));
   if(id==='dashboard')updateDash();
   if(id==='badges')renderBadges();
+  const bgVid=el.querySelector('.page-bg-video');
+  if(bgVid){bgVid.muted=true;bgVid.play().catch(()=>{})}
 }
 function toggleTheme(){
   const isLight=document.body.classList.toggle('light');
@@ -264,4 +266,8 @@ document.getElementById('examDate').min=new Date().toISOString().split('T')[0];
     document.querySelectorAll('.theme-btn').forEach(b=>b.textContent='☀️');
     const dt=document.getElementById('darkToggle');if(dt)dt.checked=false;
   }
+})();
+(function forceHeroVideoPlay(){
+  const hv=document.querySelector('.hero-video');
+  if(hv){hv.muted=true;hv.play().catch(()=>{})}
 })();
