@@ -29,15 +29,18 @@ const levelTitles=['Beginner Breather','Calm Seeker','Mindful Student','Zen Scho
 // ── CURSOR ────────────────────────────────────────────────────────
 const dot=document.getElementById('cur-dot');
 const ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
+let mx=0,my=0,rx=0,ry=0,trailTick=0;
 document.addEventListener('mousemove',e=>{
   mx=e.clientX;my=e.clientY;
   dot.style.left=mx+'px';dot.style.top=my+'px';
-  // Trail
-  const t=document.createElement('div');t.className='cur-trail';
-  t.style.left=mx+'px';t.style.top=my+'px';
-  const s=Math.random()*5+2;t.style.width=s+'px';t.style.height=s+'px';
-  document.body.appendChild(t);setTimeout(()=>t.remove(),600);
+  // Trail — throttled for a smoother neon streak instead of a dense blob
+  trailTick++;
+  if(trailTick%2===0){
+    const t=document.createElement('div');t.className='cur-trail';
+    t.style.left=mx+'px';t.style.top=my+'px';
+    const s=Math.random()*4+3;t.style.width=s+'px';t.style.height=s+'px';
+    document.body.appendChild(t);setTimeout(()=>t.remove(),700);
+  }
 });
 (function animRing(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
 document.addEventListener('mousedown',()=>{dot.style.width='12px';dot.style.height='12px';ring.style.width='20px';ring.style.height='20px';ring.style.borderColor='rgba(0,201,177,.9)'});
@@ -95,7 +98,12 @@ function showPage(id){
   if(id==='dashboard')updateDash();
   if(id==='badges')renderBadges();
 }
-function toggleTheme(){const d=!document.body.classList.contains('light');document.body.classList.toggle('light',!d);document.querySelector('#mainNav .theme-btn').textContent=d?'🌙':'☀️'}
+function toggleTheme(){
+  const isLight=document.body.classList.toggle('light');
+  document.querySelectorAll('.theme-btn').forEach(b=>b.textContent=isLight?'☀️':'🌙');
+  const dt=document.getElementById('darkToggle');if(dt)dt.checked=!isLight;
+  localStorage.setItem('cc-theme',isLight?'light':'dark');
+}
 function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
 
@@ -249,3 +257,11 @@ function exportData(){const a=document.createElement('a');a.href='data:text/json
 
 // ── INIT ──────────────────────────────────────────────────────────
 document.getElementById('examDate').min=new Date().toISOString().split('T')[0];
+(function initTheme(){
+  const saved=localStorage.getItem('cc-theme');
+  if(saved==='light'){
+    document.body.classList.add('light');
+    document.querySelectorAll('.theme-btn').forEach(b=>b.textContent='☀️');
+    const dt=document.getElementById('darkToggle');if(dt)dt.checked=false;
+  }
+})();
